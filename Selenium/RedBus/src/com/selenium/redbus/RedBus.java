@@ -45,5 +45,9 @@ class RedBus {
 				+ "']/../..//td[text()='" + date + "']")).click();
 
 		driver.findElement(By.id("search_btn")).click();
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		driver.findElement(By.xpath("//*[@id=\"10327633\"]/div/div[2]/div[1]")).click();
 	}
 }
